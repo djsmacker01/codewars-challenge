@@ -10,6 +10,8 @@ function numberToString(num) {
   return String(num)
 }
 
-function stringToNumber(num) {
+function numTostring(num) {
     return ''+num
 }
+
+const numberToString = num => `${num}`
