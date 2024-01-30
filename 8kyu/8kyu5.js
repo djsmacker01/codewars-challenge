@@ -21,7 +21,14 @@ const rps = (p1, p2) => {
     return "Player 2 won!";
   }
 }
-
+const rps = (p1, p2) => {
+  const rules = {
+    'scissors': 'paper',
+    'rock': 'scissors',
+    'paper': 'rock'
+  };
+  return rules[p1] === p2 ? 'Player 1 won!' : p1 === p2 ? 'Draw!' : 'Player 2 won!';
+};
 // console.log(rps("scissors", "paper")); // Output: "Player 1 won!"
 // console.log(rps("scissors", "rock"));  // Output: "Player 2 won!"
 // console.log(rps("paper", "paper"));    // Output: "Draw!"
