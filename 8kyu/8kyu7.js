@@ -5,5 +5,6 @@
 
 // "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
 function covertToArray(value) {
-     
+    let covertString = " I love Liverpool Football Club"
+    
  }
