@@ -7,5 +7,7 @@
 function covertToArray(value) {
     let covertString = " I love Liverpool Football Club"
     let res = covertString.split(",")
+    console.log(res)
 }
  
+covertToArray()
