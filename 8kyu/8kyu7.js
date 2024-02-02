@@ -10,4 +10,4 @@ function covertToArray(value) {
     console.log(res)
 }
  
-covertToArray()
+covertToArray('My best is yet to come')
