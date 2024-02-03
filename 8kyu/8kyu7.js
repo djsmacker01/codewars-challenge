@@ -7,8 +7,7 @@
 
 function covertToArray(inputString) {
     let covertString = inputString.split(" ")
-    
-    
+    return covertString
 }
  
 covertToArray('My best is yet to come')
