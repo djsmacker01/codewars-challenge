@@ -4,10 +4,11 @@
 // "Robin Singh" ==> ["Robin", "Singh"]
 
 // "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
-function covertToArray(value) {
-    let covertString = value
-    let res = covertString.split(" ")
-    console.log(res)
+
+function covertToArray(inputString) {
+    let covertString = inputString.split(" ")
+    
+    
 }
  
 covertToArray('My best is yet to come')
