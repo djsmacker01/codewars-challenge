@@ -10,4 +10,4 @@ function covertToArray(inputString) {
     return covertString
 }
  
-covertToArray('My best is yet to come')
+covertToArray('My best is yet to come') 
