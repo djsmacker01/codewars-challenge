@@ -19,6 +19,6 @@ return str.slice(1, -1)
 // Examples
 
 function removeStr(str) {
-    
+    return string.split(',').slice(1, -1).join(' ') || null
     
 }
