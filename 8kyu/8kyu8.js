@@ -6,5 +6,5 @@
 // Input are single string with atleast two characters
 // the same string return without the first and last characters
 function removeChar(str) {
-return str.slice()
+return str.slice(1, -1)
 }
