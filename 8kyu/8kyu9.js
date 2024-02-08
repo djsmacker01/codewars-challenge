@@ -14,3 +14,12 @@
 // The first argument can be an empty string
 // In languages with no distinct character data type, the second argument
 //  will be a string of length 1
+
+function str_count(str, count) {
+    let count = 0
+    for (let i = 0; i < str.length; i++){
+        if (str[i] === count) {
+            count++;
+     }
+    }
+}
