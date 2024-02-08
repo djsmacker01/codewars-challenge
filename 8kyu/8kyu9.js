@@ -15,10 +15,10 @@
 // In languages with no distinct character data type, the second argument
 //  will be a string of length 1
 
-function str_count(str, count) {
+function str_count(str, char) {
     let count = 0
     for (let i = 0; i < str.length; i++){
-        if (str[i] === count) {
+        if (str[i] === char) {
             count++;
      }
     }
