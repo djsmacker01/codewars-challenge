@@ -27,12 +27,31 @@
 // contacting the second object ball for the first time.
 // Both object balls must be hit at least once.
 
+// function hasScored(s) {
+//   let balls = new Set(), cushions = 0;
+//   for (let c of s) {
+//     if ('nesw'.includes(c)) ++cushions;
+//     if ('WYR'.includes(c)) balls.add(c);
+//     if (balls.size == 2) return cushions >= 3 && !(balls.has('W') && balls.has('Y'));
+//   }
+//   return false;
+// }
+
 function hasScored(s) {
-  let balls = new Set(), cushions = 0;
-  for (let c of s) {
-    if ('nesw'.includes(c)) ++cushions;
-    if ('WYR'.includes(c)) balls.add(c);
-    if (balls.size == 2) return cushions >= 3 && !(balls.has('W') && balls.has('Y'));
+  let directions = 0;
+  let balls = new Set();
+
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i];
+    if (char === "n" || char === "e" || char === "s" || char === "w") {
+      directions++;
+    } else {
+      balls.add(char);
+      if (balls.size === 2) {
+        return directions >= 3;
+      }
+    }
   }
+
   return false;
 }
