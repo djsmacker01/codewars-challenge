@@ -37,21 +37,53 @@
 //   return false;
 // }
 
+// function hasScored(s) {
+//   let directions = 0;
+//   let balls = new Set();
+
+//   for (let i = 0; i < s.length; i++) {
+//     const char = s[i];
+//     if (char === "n" || char === "e" || char === "s" || char === "w") {
+//       directions++;
+//     } else {
+//       balls.add(char);
+//       if (balls.size === 2) {
+//         return directions >= 3;
+//       }
+//     }
+//   }
+
+//   return false;
+// }
+
 function hasScored(s) {
-  let directions = 0;
-  let balls = new Set();
+    let cushionCount = 0;
+    let objectBallsHit = new Set();
+    let secondObjectBallHit = false;
 
-  for (let i = 0; i < s.length; i++) {
-    const char = s[i];
-    if (char === "n" || char === "e" || char === "s" || char === "w") {
-      directions++;
-    } else {
-      balls.add(char);
-      if (balls.size === 2) {
-        return directions >= 3;
-      }
+    for (let i = 0; i < s.length; i++) {
+        const char = s[i];
+        if (['w', 'e', 'n', 's'].includes(char)) {
+            cushionCount++;
+        } else if (['W', 'Y', 'R'].includes(char)) {
+            objectBallsHit.add(char);
+            if (objectBallsHit.size === 2) {
+                if (cushionCount < 3) {
+                    return false; // If cushions are hit less than 3 times before second object ball, no score
+                }
+                secondObjectBallHit = true;
+            }
+        }
     }
-  }
 
-  return false;
+    return objectBallsHit.size === 2 && cushionCount >= 3 && secondObjectBallHit;
 }
+
+// Example usage:
+console.log(hasScored("YneRw"));  // false
+console.log(hasScored("wYnwY"));  // false
+console.log(hasScored("neR"));    // false
+console.log(hasScored(""));       // false
+console.log(hasScored("YRnnenRY"));// false
+console.log(hasScored("eRWewsnW"));// false
+console.log(hasScored("seRWeRwR"));// false
