@@ -58,4 +58,9 @@ function animals(heads, legs) {
     if (heads == 0 && legs == 0)
         return [0, 0];
 
+    if (heads < 0 || legs < 0)
+        return 'No Solutions'
+
+    
+
 }
