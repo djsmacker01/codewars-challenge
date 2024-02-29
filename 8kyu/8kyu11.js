@@ -1,0 +1,7 @@
+
+
+
+function animals(heads, legs) {
+    
+    
+}
