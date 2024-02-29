@@ -54,13 +54,15 @@
 
 
 function animals(heads, legs) {
-
+    let cow = legs / 2 - heads
+    let chickens = heads - cow
     if (heads == 0 && legs == 0)
         return [0, 0];
 
     if (heads < 0 || legs < 0)
         return 'No Solutions'
 
-    
+    if (chickens < 0 || cow < 0 || chickeens % 1 > 0 || cow % 1 > 0)
+        return 'No Solutions'    
 
 }
