@@ -62,7 +62,7 @@ function animals(heads, legs) {
     if (heads < 0 || legs < 0)
         return 'No Solutions'
 
-    if (chickens < 0 || cow < 0 || chickeens % 1 > 0 || cow % 1 > 0)
+    if (chickens < 0 || cow < 0 || chickens % 1 > 0 || cow % 1 > 0)
         return 'No Solutions'    
 
 }
