@@ -69,3 +69,4 @@ function animals(heads, legs) {
     return [chickens, cow]
 
 }
+animals(700, 400)
