@@ -2,7 +2,7 @@
 
 // Everybody has probably heard of the animal heads and legs problem from the earlier years at school. It goes:
 
-// “A farm contains chickens and cows. There are x heads and y legs. How many chickens and cows are there?” 
+// “A farm contains chickens and cows. There are x heads and y legs. How many chickens and cows are there?”
 
 // Where x <= 1000 and y <=1000
 
@@ -18,7 +18,7 @@
 
 // [Heads, Legs] = [72, 200]
 
-// VALID - [72, 200] =>             [44 , 28]   
+// VALID - [72, 200] =>             [44 , 28]
 //                              [Chickens, Cows]
 
 // INVALID - [72, 201] => "No solutions"
@@ -29,25 +29,33 @@
 // You will only be given integers types - however negative values (edge cases) will be given.
 
 
+// function animals(heads, legs) {
+//     // Check for invalid cases
+//     if (heads < 0 || legs < 0 || legs % 2 !== 0 || heads > legs / 2) {
+//         return "No solutions";
+//     }
+
+//     // Calculate the number of cows (chickens can be calculated from heads - cows)
+//     const cows = (legs - 2 * heads) / 2;
+//     const chickens = heads - cows;
+
+//     // Check for non-negative integer solutions
+//     if (Number.isInteger(chickens) && Number.isInteger(cows) && chickens >= 0 && cows >= 0) {
+//         return [chickens, cows];
+//     } else {
+//         return "No solutions";
+//     }
+// }
+
+// // Test cases
+// console.log(animals(72, 200));  // Output: [44, 28]
+// console.log(animals(72, 201));  // Output: "No solutions"
+// console.log(animals(0, 0));      // Output: [0, 0]
+
+
 function animals(heads, legs) {
-    // Check for invalid cases
-    if (heads < 0 || legs < 0 || legs % 2 !== 0 || heads > legs / 2) {
-        return "No solutions";
-    }
 
-    // Calculate the number of cows (chickens can be calculated from heads - cows)
-    const cows = (legs - 2 * heads) / 2;
-    const chickens = heads - cows;
+    if (heads == 0 && legs == 0)
+        return [0, 0];
 
-    // Check for non-negative integer solutions
-    if (Number.isInteger(chickens) && Number.isInteger(cows) && chickens >= 0 && cows >= 0) {
-        return [chickens, cows];
-    } else {
-        return "No solutions";
-    }
 }
-
-// Test cases
-console.log(animals(72, 200));  // Output: [44, 28]
-console.log(animals(72, 201));  // Output: "No solutions"
-console.log(animals(0, 0));      // Output: [0, 0]
