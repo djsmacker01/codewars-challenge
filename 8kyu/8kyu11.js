@@ -70,3 +70,4 @@ function animals(heads, legs) {
 
 }
 animals(700, 400)
+animals(600,200)
