@@ -35,6 +35,7 @@
 //         return "No solutions";
 //     }
 
+
 //     // Calculate the number of cows (chickens can be calculated from heads - cows)
 //     const cows = (legs - 2 * heads) / 2;
 //     const chickens = heads - cows;
