@@ -34,7 +34,7 @@
 //     if (heads < 0 || legs < 0 || legs % 2 !== 0 || heads > legs / 2) {
 //         return "No solutions";
 //     }
-
+ 
 
 //     // Calculate the number of cows (chickens can be calculated from heads - cows)
 //     const cows = (legs - 2 * heads) / 2;
